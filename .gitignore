@@ -4,3 +4,7 @@
 
 # Package
 node_modules
+
+# Build
+dist
+out-tsc
