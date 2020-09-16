@@ -10,17 +10,21 @@
     "build:typescript": "yarn tsc --build tsconfig.prod.json",
     "build:webpack": "yarn webpack --env.mode=production",
     "build:clean": "yarn rimraf dist",
-    "build": "yarn build:clean & yarn build:typescript & yarn build:webpack"
+    "build": "yarn build:clean & yarn build:typescript & yarn build:webpack",
+    "test": "jest"
   },
   "devDependencies": {
     "@types/node": "^14.10.1",
     "copy-webpack-plugin": "^6.1.0",
     "css-loader": "^4.3.0",
     "express": "^4.17.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.4.2",
     "mini-css-extract-plugin": "^0.11.2",
     "sass": "^1.26.10",
     "sass-loader": "^10.0.2",
     "style-loader": "^1.2.1",
+    "ts-jest": "^26.3.0",
     "ts-loader": "^8.0.3",
     "ts-node-dev": "^1.0.0-pre.62",
     "uglifyjs-webpack-plugin": "^2.2.0",
