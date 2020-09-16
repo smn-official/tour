@@ -2,7 +2,7 @@ const path = require('path');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: {
     'tour': './src/index.ts',
     'tour.min': './src/index.ts',
@@ -26,7 +26,7 @@ module.exports = {
     })]
   },
   output: {
-     path: path.resolve(__dirname, 'dist'),
+     path: path.resolve(__dirname, 'demo/tour'),
      filename: '[name].js',
      libraryTarget: 'var',
      umdNamedDefine: true,
@@ -34,5 +34,5 @@ module.exports = {
   },
   stats: {
     colors: true
-},
+  }
 };
