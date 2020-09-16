@@ -4,11 +4,11 @@ const { merge } = require('webpack-merge');
 
 const CopyPlugin = require('copy-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const commonConfig = {
   entry: {
-    'tour': './src/index.ts',
+    tour: './src/index.ts',
     'tour.min': './src/index.ts',
   },
   module: {
@@ -21,7 +21,7 @@ const commonConfig = {
           'sass-loader',
         ],
       },
-    ]
+    ],
   },
   resolve: {
     extensions: ['.ts', '.js'],
@@ -29,21 +29,21 @@ const commonConfig = {
   optimization: {
     minimize: true,
     minimizer: [new UglifyJsPlugin({
-      include: /\.min\.js$/
-    })]
+      include: /\.min\.js$/,
+    })],
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'tour.css',
-      chunkFilename: '[name].css'
+      chunkFilename: '[name].css',
     }),
     new CopyPlugin({
       patterns: [
         {
           from: 'src/**/*.scss',
-          to: 'tour.scss'
+          to: 'tour.scss',
         },
-      ]
+      ],
     }),
   ],
   output: {
@@ -53,7 +53,7 @@ const commonConfig = {
     library: 'Tour',
   },
   stats: {
-    colors: true
+    colors: true,
   },
 };
 
@@ -66,7 +66,7 @@ const developmentConfig = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
-    ]
+    ],
   },
   output: {
     path: path.resolve(__dirname, 'demo/tour'),
@@ -83,17 +83,17 @@ const productionConfig = {
         use: [{
           loader: 'ts-loader',
           options: {
-            configFile: "tsconfig.prod.json"
-          }
+            configFile: 'tsconfig.prod.json',
+          },
         }],
         exclude: /node_modules/,
       },
-    ]
+    ],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     library: 'Tour',
-  }
+  },
 };
 
 module.exports = ({ mode }) => {

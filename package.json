@@ -11,12 +11,18 @@
     "build:webpack": "yarn webpack --env.mode=production",
     "build:clean": "yarn rimraf dist",
     "build": "yarn build:clean & yarn build:typescript & yarn build:webpack",
-    "test": "jest"
+    "test": "jest",
+    "lint": "yarn eslint --ext .js,.ts ./"
   },
   "devDependencies": {
     "@types/node": "^14.10.1",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
     "copy-webpack-plugin": "^6.1.0",
     "css-loader": "^4.3.0",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
     "express": "^4.17.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.4.2",

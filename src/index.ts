@@ -3,7 +3,7 @@ import './styles.scss';
 interface TourProperties {
   target: Element,
   descriptiom: string;
-};
+}
 
 class Tour {
   items: TourProperties[];
