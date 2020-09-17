@@ -8,15 +8,28 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="tour.css">
+  <link rel="stylesheet" href="tour/tour.css">
 
   <script src="tour/tour.js"></script>
 
   <script>
+    function loadTour() {
+      const tour = Tour.default;
+    
+      const tourItems = [{
+        target: document.querySelector('h1'),
+        description: 'It\'s a h1',
+      }];
+  
+      tour.start();
+    }
+  </script>
+  <script>
   </script>
 
 </head>
-<body>
+<body onload="loadTour()">
   <h1>Tour Demo</h1>
 </body>
 </html>

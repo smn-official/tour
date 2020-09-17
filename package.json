@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "demo:server": "node demo-server.js",
-    "demo:watch": "yarn webpack --watch",
+    "demo:watch": "yarn webpack --watch --env.mode=development",
     "build:typescript": "yarn tsc --build tsconfig.prod.json",
     "build:webpack": "yarn webpack --env.mode=production",
     "build:clean": "yarn rimraf dist",
