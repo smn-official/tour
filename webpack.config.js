@@ -21,6 +21,10 @@ const commonConfig = {
           'sass-loader',
         ],
       },
+      {
+        test: /\.html$/i,
+        loader: 'raw-loader',
+      },
     ],
   },
   resolve: {

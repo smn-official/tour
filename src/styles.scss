@@ -1,6 +1,8 @@
+$easing: cubic-bezier(0.0, 0.0, 0.2, 1);
+
 .tour {
 
-  &_overlay {
+  &__overlay {
     background-color: rgba(0, 0, 0, .54);
     position: fixed;
     top: 0;
@@ -8,5 +10,21 @@
     right: 0;
     bottom: 0;
     z-index: 9;
+  }
+
+  &__clone {
+    position: absolute;
+    z-index: 10;
+  }
+
+  &__dialog {
+    background-color: #ffffff;
+    border-radius: 4px;
+
+    position: absolute;
+    z-index: 10;
+
+    transition: box-shadow 280ms $easing;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.14), 0 3px 4px 0 rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.20);
   }
 }

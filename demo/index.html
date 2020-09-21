@@ -8,21 +8,24 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="tour.css">
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="tour/tour.css">
 
   <script src="tour/tour.js"></script>
 
   <script>
     function loadTour() {
-      const tour = Tour.default;
+      var tour = Tour.default;
     
-      const tourItems = [{
+      var tourItems = [{
+        target: document.querySelector('nav'),
+        description: 'It\'s a nav',
+      }, {
         target: document.querySelector('h1'),
         description: 'It\'s a h1',
       }];
   
-      tour.start();
+      tour.start(tourItems);
     }
   </script>
   <script>
@@ -30,6 +33,7 @@
 
 </head>
 <body onload="loadTour()">
+  <nav></nav>
   <h1>Tour Demo</h1>
 </body>
 </html>

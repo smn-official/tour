@@ -9,3 +9,26 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+h1 {
+  position: absolute;
+  bottom: 50%;
+  right: 0;
+  display: block;
+}
+
+nav {
+  background-color: #000000;
+  position: fixed;
+  /* top: 0;
+  right: 0;
+  bottom: 0;
+  width: 72px; */
+
+  /* height */
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 72px;
+
+}
